@@ -27,3 +27,10 @@ Foxl updates itself in place. `brew upgrade` is a no-op unless you pass
 
 This tap is generated automatically by Foxl's private release pipeline from the
 published release metadata and GitHub's SHA-256 asset digest. Do not hand-edit it.
+
+## Supply chain
+
+The protected `main` branch accepts updates only from the `foxl-bot` GitHub
+App. The private release pipeline accepts only the latest published Foxl
+release and GitHub's SHA-256 digest, then creates a GitHub-signed bot commit.
+Pull requests require CODEOWNER approval and cannot update `main` directly.
