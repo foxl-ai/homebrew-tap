@@ -5,16 +5,16 @@ Homebrew tap for [Foxl](https://foxl.ai), a personal AI agent for macOS.
 ## Install via Homebrew (recommended)
 
 ```bash
-brew tap foxl-ai/tap
 brew install --cask foxl-ai/tap/foxl
 ```
 
-The fully qualified cask name lets Homebrew trust only Foxl instead of every
-cask that may be added to the tap.
+The fully qualified cask name taps `foxl-ai/tap` automatically and lets Homebrew
+trust only Foxl instead of every cask that may be added to the tap.
 
-Or install it in one command:
+To tap first and install as a separate step:
 
 ```bash
+brew tap foxl-ai/tap
 brew install --cask foxl-ai/tap/foxl
 ```
 
