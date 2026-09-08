@@ -1,6 +1,6 @@
 cask "foxl" do
-  version "0.7.6"
-  sha256 "fb8a8e689f3e7da20a42007886122bf0432396e783bab396f9a5a60cd1ecd5f2"
+  version "0.7.7"
+  sha256 "0128b940bd14bfc9dcf112101bc31d138edcc20ea21e51c499a4b0b4f9824efb"
 
   url "https://github.com/foxl-ai/foxl/releases/download/v#{version}/Foxl-latest-universal.dmg",
       verified: "github.com/foxl-ai/foxl/"
@@ -14,7 +14,13 @@ cask "foxl" do
   end
 
   auto_updates true
-  depends_on macos: :monterey
+  # MUST TRACK electron-builder-production.yml's mac.minimumSystemVersion. Electron 44
+  # raised the floor to 13 (Ventura), and this line said :monterey - so brew passed its
+  # dependency check on macOS 12, installed Foxl.app, and the app then refused to launch
+  # (LSMinimumSystemVersion 13.0) with the failure landing at the one step brew cannot
+  # report on. check-homebrew-tap-gate.mjs has no opinion about depends_on, so the only
+  # thing keeping these two in step is this comment.
+  depends_on macos: :ventura
 
   app "Foxl.app"
 
