@@ -1,6 +1,6 @@
 cask "foxl" do
-  version "0.7.15"
-  sha256 "9f28b6eeba07a2b895c511e5d6d17c77a35059333363426ff87e8dcec547cbcb"
+  version "0.7.16"
+  sha256 "c11c5d6795a4354e9c4ca695ad0f6ef784448be3b798535a3cb21dc5157cbac3"
 
   url "https://github.com/foxl-ai/foxl/releases/download/v#{version}/Foxl-latest-universal.dmg",
       verified: "github.com/foxl-ai/foxl/"
