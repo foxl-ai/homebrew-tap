@@ -88,7 +88,7 @@ Foxl's application source is maintained separately. For the desktop app's terms,
 
 ## Help
 
-[Foxl support](https://foxl.ai/support) · [Installation guide](https://docs.foxl.ai/docs/get-started/download)
+[Foxl support](https://foxl.ai/support) · [Installation guide](https://docs.foxl.ai/docs/get-started/install)
 
 For installation problems, include your macOS version, Mac architecture, the command you ran, and its error output. Report security concerns privately to [security@foxl.ai](mailto:security@foxl.ai).
 
